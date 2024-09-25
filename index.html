@@ -12,9 +12,12 @@
 
 <body>
     <div class="clock-container">
-        <div class="title"><h3>TODAY'S TIME TABLE </h1> <p>(NGANGGUR DAY)</p></div>
+        <div class="title">
+            <h3>TODAY'S TIME TABLE </h1>
+                <p>(NGANGGUR DAY)</p>
+        </div>
         <br />
-       
+
         <br />
         <div class="clock">
             <div class="clock-face">
@@ -93,10 +96,10 @@
 <script>
     function updateClock() {
         const now = new Date();
-        const hours = now.getHours() % 12;
+        const hours = now.getHours();
         const minutes = now.getMinutes();
 
-        const hourDeg = (hours + minutes / 60) * 30;
+        const hourDeg = (hours + minutes / 60) * 15;
         const minuteDeg = minutes * 6;
 
         document.querySelector(
