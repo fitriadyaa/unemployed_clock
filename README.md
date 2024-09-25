@@ -1,3 +1,5 @@
+![clock]([https://github.com/fitriadyaa/TheStory/blob/main/the%20story.png?raw=true])
+
 ## Unemployed Clock Like Bae Seok Ryu's Love Next Door
 
 Feel free to explore the codebase and dive into the journey! 🚀📱
