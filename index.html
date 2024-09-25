@@ -84,7 +84,7 @@
             <div class="hand hour-hand"></div>
             <div class="hand minute-hand"></div>
 
-            <div class="center">PLAY</div>
+            <div class="center" id="playButton">PLAY</div>
         </div>
         <br /><br />
         <div class="unit">
@@ -112,6 +112,37 @@
 
     setInterval(updateClock, 1000);
     updateClock();
+
+
+</script>
+
+<div id="player"></div>
+
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    var player;
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '0',
+            width: '0',
+            videoId: 'Av10eIyOF90',
+            events: {
+                'onReady': onPlayerReady
+            }
+        });
+    }
+
+    function onPlayerReady(event) {
+        document.getElementById('playButton').addEventListener('click', function () {
+            if (player.getPlayerState() == 1) {
+                player.pauseVideo();
+                this.textContent = 'PLAY';
+            } else {
+                player.playVideo();
+                this.textContent = 'PAUSE';
+            }
+        });
+    }
 </script>
 
 </html>
